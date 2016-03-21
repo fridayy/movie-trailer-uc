@@ -8,6 +8,7 @@ author bnjm
 """
 
 from urllib.request import *
+from urllib.error import URLError
 import json
 
 
@@ -26,15 +27,18 @@ class Movie:
     """
     Queries the open movie database api (http://www.omdbapi.com/)
     """
-
     def queryopenmoviedatabase(self, title):
         # replacing whitespace with + for correct api usage
         apititle = self.title.replace(" ", "+")
         url = "http://www.omdbapi.com/?t={0}&y=&plot=short&r=json".format(apititle)
         # getting the json response from omdbapi
-        response = urlopen(url).read()
+        try:
+            response = urlopen(url).read()
+        except URLError:
+            print("Could not reach: {}".format(url))
         # decode the response to a string
         resstring = response.decode('UTF-8')
         # read json
         data = json.loads(resstring)
+
         return data
