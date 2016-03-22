@@ -40,7 +40,7 @@ class Omdbhandler:
         data = self.generatejson(response)
 
         # Raise an Error if the API could not find the movie
-        if data['Error']:
+        if data['Response'] == "False":
             raise RuntimeError
 
         return data
