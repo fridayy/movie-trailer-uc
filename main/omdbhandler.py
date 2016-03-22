@@ -1,4 +1,4 @@
-from urllib.request import *
+from urllib.request import urlopen
 from urllib.error import URLError
 import json
 
