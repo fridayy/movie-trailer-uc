@@ -36,5 +36,9 @@ class Omdbhandler:
         response = self.queryopenmoviedatabase(withtitle)
         data = self.generatejson(response)
 
+        # Raise an Error if the API could not find the movie
+        if data['Error']:
+            raise RuntimeError
+
         return data
 

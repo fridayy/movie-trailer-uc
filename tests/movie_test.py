@@ -1,21 +1,17 @@
 # Unittest for movie.py
 
 import unittest
-from unittest.mock import MagicMock
 
 from main.movie import *
 
 
 class TestMovie(unittest.TestCase):
 
-    def setUp(self):
-        title = "Test"
-        trailer_url = "http://youtube.com/watch?v=12345"
-        self.movie = Movie(title, trailer_url)
+    def testInvalidTitle(self):
+        print("Testing invalid Title")
+        with self.assertRaises(RuntimeError):
+            m = Movie("d1hd1872d7g2", "213d12d")
 
-    def testMovieCorrectData(self):
-        um = MagicMock()
-        um.return_value = b'{"Runtime":123}'
-        data = um
-        print(data)
+
+
 
