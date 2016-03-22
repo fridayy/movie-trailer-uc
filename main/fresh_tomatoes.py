@@ -15,11 +15,11 @@ main_page_head = '''
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
     <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
     <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
-            font-family: 'Ubuntu', sans-serif;
+            font-family: 'Droid Sans', sans-serif;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -39,6 +39,7 @@ main_page_head = '''
         .movie-tile {
             margin-bottom: 20px;
             padding-top: 20px;
+            cursor: default;
         }
         .movie-tile:hover {
             background-color: #EEE;
@@ -148,7 +149,7 @@ movie_tile_content = '''
             <p>Runtime: {movie_runtime}</p>
             <p>Country: {movie_country}</p>
             <p>Actors: {movie_actors}</p>
-            <p>Plot: {movie_plot}</p>
+            <p>{movie_plot}</p>
         </div>
     </div>
 </div>

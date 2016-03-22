@@ -5,9 +5,6 @@
 from main.fresh_tomatoes import *
 from main.movie import *
 
-
-
-
 aBittersweetLife = Movie("A Bittersweet Life",
                          "https://www.youtube.com/watch?v=0P4YG73KHHo")
 
@@ -17,8 +14,8 @@ oldboy = Movie("Oldboy",
 isawthedevil = Movie("I Saw The Devil",
                      "https://www.youtube.com/watch?v=xwWgp1bqVwE")
 
-movies = []
-movies.append(aBittersweetLife)
-movies.append(oldboy)
-movies.append(isawthedevil)
+wargames = Movie("WarGames",
+                 "https://www.youtube.com/watch?v=tAcEzhQ7oqA")
+
+movies = [aBittersweetLife, oldboy, isawthedevil, wargames]
 open_movies_page(movies)
