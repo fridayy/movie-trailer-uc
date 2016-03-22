@@ -2,7 +2,10 @@ from urllib.request import *
 from urllib.error import URLError
 import json
 
-
+"""
+Handles the API calls to the open movie database api (http://www.omdbapi.com/)
+and returns the JSON response as a dictonary
+"""
 class Omdbhandler:
     """
     Queries the open movie database api (http://www.omdbapi.com/)

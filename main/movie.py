@@ -1,9 +1,5 @@
 """
-A simple movie data structure which given a certain title will gather
-certain additional information from the open movie database API
-(http://www.omdbapi.com/)
-Thank you omdbapi!
-
+A simple movie data structure
 author bnjm
 """
 from main.omdbhandler import *
